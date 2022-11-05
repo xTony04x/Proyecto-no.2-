@@ -18,21 +18,25 @@ int main()
     int num,menu,fila;
     int fila1 = 1, fila2 = 2 , fila3 = 3, fila4 = 4;
     nodo* lista = NULL;
-
+    
+    inicio1:
     cout << "MENU: \n (1)-Ingresar Producto. \n (2)-Sacar Producto \n (3)-Salir \n"; cin >> menu;
 
         switch(menu)
         {
         case 1:
-            cout << "\n En que columna desea ingresar los productos? \n (1)(2)(3)(4)"; cin >> fila;
+          
+            cout << "\n En que columna desea ingresar los productos? \n (1)(2)(3)(4)\n"; cin >> fila;
             if (fila == fila1) {
-                cout << "Ingrese el numero de productos que desea ingresar: "; cin >> num;
+                cout << "Ingrese el numero de productos que desea ingresar (MAX 3 productos por columna): "; cin >> num;
 
                 for (size_t i = 0; i < num; i++)
                 {
                     cout << "Ingrese un texto: "; cin >> n;
                     insertarlista(lista, n);
                 }
+                
+                goto inicio1;
             }
             else if (fila == fila2) {
 
