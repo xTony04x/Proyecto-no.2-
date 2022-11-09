@@ -56,8 +56,9 @@ int main()
     nodo3* lista3 = NULL;
     nodo4* lista4 = NULL;
     
- 
-    cout << "MENU: \n (1)-Ingresar Producto. \n (2)-Sacar Producto \n (3)-Salir \n"; cin >> menu;
+inicio1:
+    
+    cout << "Bodegas Inteligentes de Guatemala S.A. \n MENU : \n (1)-Almacenar Producto. \n (2)-Retirar Producto \n (3)-Mostrar productos \n "; cin >> menu;
 
         switch(menu)
         {
@@ -73,7 +74,7 @@ int main()
                     insertarlista(lista, n);
                 }
                 
-                system("pause");
+                goto inicio1;
             }
             else if (fila == fila2) {
                 cout << "Ingrese el numero de productos que desea ingresar (MAX 3 productos por columna): "; cin >> num;
@@ -84,7 +85,7 @@ int main()
                     insertarlista2(lista2, n);
                 }
 
-                system("pause");
+                goto inicio1;
             }
             else if (fila == fila3) {
                 cout << "Ingrese el numero de productos que desea ingresar (MAX 3 productos por columna): "; cin >> num;
@@ -95,7 +96,7 @@ int main()
                     insertarlista3(lista3, n);
                 }
 
-                system("pause");
+                goto inicio1;
             }
             else if (fila == fila4) {
                 cout << "Ingrese el numero de productos que desea ingresar (MAX 3 productos por columna): "; cin >> num;
@@ -105,24 +106,25 @@ int main()
                     cout << "Ingrese un texto: "; cin >> n;
                     insertarlista4(lista4, n);
                 }
-                system("pause");
+
                 
             }
             else
             {
                 cout << "Esta columna no esta registrada";
             }
-           
-            system("pause");
+            goto inicio1;
+            
             break;
         case 2:
             
             cout << "Ingrese el producto que desea buscar: "; cin >> n1;
             buscarlista(lista, n1);
-            system("pause");
+            goto inicio1;
            
             break;
         case 3:
+
             break;
         default:
             break;
